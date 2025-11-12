@@ -145,7 +145,21 @@
       font-size: 0.8rem;
       z-index: 2;
     }
+
+    /* Разрешаем клики на кнопке и тексте */
+    .screen, .follow-btn {
+      pointer-events: auto;
+      position: relative;
+      z-index: 5;
+    }
+
+    /* Запрещаем клики по слоям фона и свечения */
+    body::after,
+    .glow {
+      pointer-events: none;
+    }
   </style>
+
 </head>
 <body>
   <div class="phone">
